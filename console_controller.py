@@ -1,7 +1,7 @@
 import volodymyr_solutions
 
 
-class ConsoleSolver:
+class ConsoleController:
     def __init__(self):
         self.tasks = {
             "108": volodymyr_solutions.Task108(),
@@ -44,4 +44,4 @@ class ConsoleSolver:
 
 
 if __name__ == "__main__":
-    ConsoleSolver().run()
+    ConsoleController().run()
