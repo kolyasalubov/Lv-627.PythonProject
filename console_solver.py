@@ -1,10 +1,14 @@
 import volodymyr_solutions
+import sofiia_kovalchuk
 
 
 class ConsoleSolver:
     def __init__(self):
         self.tasks = {
+            "088a": sofiia_kovalchuk.Task088a(),
+            "088b": sofiia_kovalchuk.Task088b(),
             "108": volodymyr_solutions.Task108(),
+            "322": sofiia_kovalchuk.Task322(),
             "331": volodymyr_solutions.Task331()
         }
 
