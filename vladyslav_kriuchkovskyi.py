@@ -28,7 +28,7 @@ class Task332(Task):
         self.description = "Given a natural number n, find such numbers x, y, z, t that n = x^2 + y^2 + z^2 + t^2"
 
     def solve(self):
-        n = int(input())
+        n = self.arg
         sqrt_n = int(sqrt(n))
         if n == sqrt_n * sqrt_n:
             return f'x = 0, y = 0, z = 0, t = {sqrt_n}'
