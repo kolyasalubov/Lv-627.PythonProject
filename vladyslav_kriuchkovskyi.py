@@ -10,7 +10,7 @@ class Task088v(Task):
     def solve(self):
         n = str(self.arg)
         answer = f"{n[-1]}{n[1:-1]}{n[0]}" if len(n) > 1 else n
-        return f"The answer is {answer}"
+        return f"{answer}"
 
 
 class Task088g(Task):
