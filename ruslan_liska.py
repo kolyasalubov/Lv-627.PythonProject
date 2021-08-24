@@ -1,14 +1,24 @@
-n = int(input("Please enter the quantity of triangle rows: "))
-def pascals_triangle(n):
-    results = []
-    for _ in range(n): 
-        row = [1]
-        if results: 
-            last_row = results[-1] 
-            row.extend([sum(pair) for pair in zip(last_row, last_row[1:])])
-            row.append(1)
-        results.append(row) 
-    for i in results:
-        print(i)
+from task import Task
 
-pascals_triangle(n)
+class Task555(Task):
+    def __init__(self):
+        super()
+        self.description = ""
+    
+    
+    def solve(self, num_of_rows):
+        self.num_of_rows = num_of_rows
+        results = []
+        for _ in range(num_of_rows): 
+            row = [1]
+            if results: 
+                last_row = results[-1] 
+                row.extend([sum(i) for i in zip(last_row, last_row[1:])])
+                row.append(1)
+            results.append(row) 
+        for i in results:
+            print(i)
+
+a = Task555()
+print(type(a))
+a.solve(5)
