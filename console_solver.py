@@ -1,5 +1,6 @@
 import volodymyr_solutions
 import sofiia_kovalchuk
+import oleh_solutions
 
 
 class ConsoleSolver:
@@ -9,7 +10,10 @@ class ConsoleSolver:
             "088b": sofiia_kovalchuk.Task088b(),
             "108": volodymyr_solutions.Task108(),
             "322": sofiia_kovalchuk.Task322(),
-            "331": volodymyr_solutions.Task331()
+            "331": volodymyr_solutions.Task331(),
+            "086a": oleh_solutions.Task086a(),
+            "086b": oleh_solutions.Task086b(),
+            "330": oleh_solutions.Task330(),
         }
 
     @property
