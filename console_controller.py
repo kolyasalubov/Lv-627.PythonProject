@@ -32,7 +32,7 @@ class ConsoleController:
             "323": artem_prokhvatylov.Task323(),
             "555": ruslan_liska.Task555(),
             "178d": ruslan_liska.Task178d(),
-            "178e": ruslan_liska.Task178e(),
+            "178e": ruslan_liska.Task178e()
         }
         self.tasks = {x: self.tasks[x] for x in sorted(self.tasks.keys(), key=lambda x: int(x.rstrip('abcde')))}
 
