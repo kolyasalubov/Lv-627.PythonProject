@@ -8,6 +8,7 @@ import tadey_kushnir
 import roman_levytskyi
 import artem_prokhvatylov
 import ruslan_liska
+import vladyslav_kriuchkovskyi
 
 class ConsoleController:
 
@@ -22,11 +23,14 @@ class ConsoleController:
         self.tasks = {
             "88a": sofiia_kovalchuk.Task088a(),
             "88b": sofiia_kovalchuk.Task088b(),
+            "88v": vladyslav_kriuchkovskyi.Task088v(),
+            "88g": vladyslav_kriuchkovskyi.Task088g(),
             "108": volodymyr_solutions.Task108(),
             "187b": roman_levytskyi.Task187b(),
             "187c": roman_levytskyi.Task187c(),
             "322": sofiia_kovalchuk.Task322(),
             "331": volodymyr_solutions.Task331(),
+            "332": vladyslav_kriuchkovskyi.Task332(),
             "87": mykhailo_solutuions.Task87(),
             "226": mykhailo_solutuions.Task226(),
             "554": roman_levytskyi.Task554(),
