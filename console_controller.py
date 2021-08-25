@@ -61,6 +61,9 @@ class ConsoleController:
         tasks_list = sorted(self.tasks.keys(), key=lambda x: int(x.rstrip(ascii_letters)))
         return tasks_list
           
+    def self_up_to_zero(self):
+        self.up = 0
+
 
     def work_with_task(self, task):
         while not self.up:
@@ -90,6 +93,7 @@ class ConsoleController:
             print('  '.join(self.show_tasks()))
             task = input("Which task would you like to view? ")
             if task in self.tasks:
+                self.self_up_to_zero()
                 self.work_with_task(self.tasks[task])
             elif task in self.commands:
                 self.commands.get(task)()
