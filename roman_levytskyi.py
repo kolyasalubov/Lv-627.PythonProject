@@ -43,4 +43,4 @@ class Task187c(Task):
     def solve(self):
         n = self.args
         counter = len([i for i in n if sqrt(i) % 2 == 0])
-        return counter
+        return f"There is {counter} numbers that are squares f even number in input list of natural numbers"
