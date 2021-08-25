@@ -3,6 +3,7 @@ import sofiia_kovalchuk
 import mykhailo_solutuions
 import oleh_solutions
 import tadey_kushnir
+import ruslan_liska
 
 
 class ConsoleSolver:
@@ -21,6 +22,10 @@ class ConsoleSolver:
             "330": oleh_solutions.Task330(),
             "107": tadey_kushnir.Task107(),
             "243a": tadey_kushnir.Task243a(),
+            "243b": tadey_kushnir.Task243b(),
+            "555": ruslan_liska.Task555(),
+            "178d": ruslan_liska.Task178d(),
+            "178e": ruslan_liska.Task178e(),
             "243b": tadey_kushnir.Task243b()
         }
 
