@@ -30,7 +30,7 @@ class Task330(Task086a):
     @staticmethod
     def is_prime(number):
         """
-        This function checks if the number is prime
+        This method checks if the number is prime
         """
         if number <= 1:
             return False
@@ -45,16 +45,40 @@ class Task330(Task086a):
             divider += 6
         return True
 
+
+    @staticmethod
+    def is_prime_mers(mers, degree):
+        """
+        This method checks if the Mersenne number is prime.
+        According to Luca-Lehmer test.
+        """
+
+        mod = 4
+        for index in range(degree - 2):
+            l = mod**2 - 2
+            mod = l % mers
+        return not mod
+
+
     def solve(self):
-        degree = 1
-        perfect_numbers = []
+        """
+        This function returns all perfect numbers less limit
+        """
+        limit = self.arg
+
+        if limit < 7:
+            return []
+        degree = 0
+        perfect_numbers = [6]
         while True:
-            multiplier1 = 2**degree
-            multiplier2 = 2**(degree+1) - 1
-            suggested_number = multiplier1 * multiplier2
-            if suggested_number >= self.arg:
-                break
-            if self.is_prime(multiplier2):
-                perfect_numbers.append(suggested_number)
             degree += 1
+            if not self.is_prime(degree):
+                continue
+            mers = 2**degree - 1
+            suggested_perfect = 2**(degree-1) * mers
+            if suggested_perfect >= limit:
+                break
+            if self.is_prime_mers(mers, degree):
+                perfect_numbers.append(suggested_perfect)
+
         return perfect_numbers
