@@ -8,7 +8,6 @@ import tadey_kushnir
 import roman_levytskyi
 import artem_prokhvatylov
 import ruslan_liska
-import vladyslav_kriuchkovskyi
 
 class ConsoleController:
 
@@ -88,9 +87,9 @@ class ConsoleController:
  
 
     def run(self):
+        print('Hello! This is the console solver for many mathematical tasks.')
         while not self.exit:
-            print('Hello! This is the console solver for many mathematical tasks.' +
-                   '\nEnter "exit" to exit.\nHere is the list of available tasks:')
+            print('Enter "exit" to exit.\nHere is the list of available tasks:')
             print('  '.join(self.show_tasks()))
             task = input("Which task would you like to view? ")
             if task in self.tasks:
