@@ -8,7 +8,15 @@ import artem_prokhvatylov
 
 
 class ConsoleController:
+
+    def close(self):
+        print("Closed")
+        self.exit = 1
+
     def __init__(self):
+        self.up = 0
+        self.exit = 0
+        self.commands = {'exit': self.close}
         self.tasks = {
             "88a": sofiia_kovalchuk.Task088a(),
             "88b": sofiia_kovalchuk.Task088b(),
@@ -29,40 +37,55 @@ class ConsoleController:
             "243b": tadey_kushnir.Task243b(),
             "182": artem_prokhvatylov.Task182(),
             "560": artem_prokhvatylov.Task560(),
-            "323": artem_prokhvatylov.Task323()
+            "323": artem_prokhvatylov.Task323(),
         }
-        self.tasks = {x: self.tasks[x] for x in sorted(self.tasks.keys(), key=lambda x: int(x.rstrip('abc')))}
 
+    def repeat(self):
+        options = ['y', 'n']
+        command = None
+        while command not in options:
+            command = input('Run that task again?(y/n): ')
+        self.up = [1,0][command == 'y']
+
+    def show_tasks(self):
+        tasks_list = sorted(self.tasks.keys(), key=lambda x: int(x.rstrip('abc')))
+        return tasks_list
+          
 
     def work_with_task(self, task):
-        print(task.description)
-        if task.require_input:
-            inp = input("Provide input value/s ").split()
-            try:
-                task.change_arguments(*map(lambda x: int(x), inp))
-            except (TypeError, ValueError):
-                print("Your value/s is/are incorrect. Try again.")
-                self.work_with_task(task)
-            else:
-                if task.validate():
-                    print(f"Solution is {task.solve()}")
+        while not self.up:
+            if task.description:
+                print(task.description)
+            if task.require_input:
+                inp = input("Provide input value/s ").split()
+                try:
+                    task.change_arguments(*map(lambda x: int(x), inp))
+                except (TypeError, ValueError):
+                    print("Your value/s is/are incorrect.")
                 else:
-                    print("Your value/s is/are incorrect. Try again.")
-                    self.work_with_task(task)
-        else:
-            print(f"Solution is {task.solve()}")
-
+                    if task.validate():
+                        print(f"Solution is {task.solve()}")
+                    else:
+                        print("Your value/s is/are incorrect.")
+            else:
+                print(f"Solution is {task.solve()}")
+            
+            self.repeat()
+ 
 
     def run(self):
-        print(f"Hello! This is the console solver for many mathematical tasks.\nHere is the list of available tasks:")
-        print('    '.join(self.tasks.keys()))
-        task = input("Which task would you like to view? ")
-        if task in self.tasks:
-            self.work_with_task(self.tasks[task])
-            self.run()
-        else:
-            print("There's no such task :/")
-            self.run()
+        while not self.exit:
+            print('Hello! This is the console solver for many mathematical tasks.' +
+                   '\nEnter "exit" to exit.\nHere is the list of available tasks:')
+            print('    '.join(self.show_tasks()))
+            task = input("Which task would you like to view? ")
+            if task in self.tasks:
+                self.work_with_task(self.tasks[task])
+            elif task in self.commands:
+                self.commands.get(task)()
+            else:
+                print("There's no such task :/")
+            
 
 
 if __name__ == "__main__":
