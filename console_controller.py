@@ -5,7 +5,7 @@ import oleh_solutions
 import tadey_kushnir
 import roman_levytskyi
 import artem_prokhvatylov
-
+import ruslan_liska
 
 class ConsoleController:
 
@@ -38,7 +38,12 @@ class ConsoleController:
             "182": artem_prokhvatylov.Task182(),
             "560": artem_prokhvatylov.Task560(),
             "323": artem_prokhvatylov.Task323(),
+            "555": ruslan_liska.Task555(),
+            "178d": ruslan_liska.Task178d(),
+            "178e": ruslan_liska.Task178e(),
         }
+        
+
 
     def repeat(self):
         options = ['y', 'n']

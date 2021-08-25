@@ -4,7 +4,7 @@ from task import Task
 
 class Task088v(Task):
     def __init__(self):
-        super()
+        super().__init__()
         self.description = "Given a natural number n, swap first and last digits of this number"
 
     def solve(self):
@@ -15,7 +15,7 @@ class Task088v(Task):
 
 class Task088g(Task):
     def __init__(self):
-        super()
+        super().__init__()
         self.description = "Given a natural number n, assign one to the beginning and the end of this number"
 
     def solve(self):
@@ -24,7 +24,7 @@ class Task088g(Task):
 
 class Task332(Task):
     def __init__(self):
-        super()
+        super().__init__()
         self.description = "Given a natural number n, find such numbers x, y, z, t that n = x^2 + y^2 + z^2 + t^2"
 
     def solve(self):
@@ -55,3 +55,4 @@ class Task332(Task):
                 y_squared = y * y
             x += 1
             x_squared = x * x
+        return "Impossible result, something gone wrong with the algorithm number 332"
