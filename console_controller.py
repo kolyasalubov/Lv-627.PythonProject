@@ -11,18 +11,22 @@ class ConsoleController:
 
     def work_with_task(self, task):
         print(task.description)
-        inp = input("Provide input value/s ").split()
-        try:
-            task.change_arguments(*map(lambda x: int(x), inp))
-        except (TypeError, ValueError):
-            print("Your value/s is/are incorrect. Try again.")
-            self.work_with_task(task)
-        else:
-            if task.validate():
-                print(f"Solution is {task.solve()}")
-            else:
+        if task.require_input:
+            inp = input("Provide input value/s ").split()
+            try:
+                task.change_arguments(*map(lambda x: int(x), inp))
+            except (TypeError, ValueError):
                 print("Your value/s is/are incorrect. Try again.")
                 self.work_with_task(task)
+            else:
+                if task.validate():
+                    print(f"Solution is {task.solve()}")
+                else:
+                    print("Your value/s is/are incorrect. Try again.")
+                    self.work_with_task(task)
+        else:
+            print(f"Solution is {task.solve()}")
+
 
     def run(self):
         print(f"Hello! This is the console solver for many mathematical tasks.\nHere is the list of available tasks:")
