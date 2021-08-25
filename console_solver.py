@@ -1,9 +1,28 @@
+import volodymyr_solutions
+import sofiia_kovalchuk
+import mykhailo_solutuions
+import oleh_solutions
+import tadey_kushnir
 import ruslan_liska
 
 
 class ConsoleSolver:
     def __init__(self):
         self.tasks = {
+            "088a": sofiia_kovalchuk.Task088a(),
+            "088b": sofiia_kovalchuk.Task088b(),
+            "108": volodymyr_solutions.Task108(),
+            "322": sofiia_kovalchuk.Task322(),
+            "331": volodymyr_solutions.Task331(),
+            "87": mykhailo_solutuions.Task87(),
+            "226": mykhailo_solutuions.Task226(),
+            "559": mykhailo_solutuions.Task559(),
+            "086a": oleh_solutions.Task086a(),
+            "086b": oleh_solutions.Task086b(),
+            "330": oleh_solutions.Task330(),
+            "107": tadey_kushnir.Task107(),
+            "243a": tadey_kushnir.Task243a(),
+            "243b": tadey_kushnir.Task243b(),
             "555": ruslan_liska.Task555(),
             "178d": ruslan_liska.Task178d(),
             "178e": ruslan_liska.Task178e(),
