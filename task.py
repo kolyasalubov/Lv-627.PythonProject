@@ -4,6 +4,7 @@ class Task:
         self.description = "This is a base class for all tasks. You shouldn't see this."
         self.require_input = True
 
+
     def change_arguments(self, arg):
         self.arg = arg
 
