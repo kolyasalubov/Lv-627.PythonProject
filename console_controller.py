@@ -8,6 +8,7 @@ import tadey_kushnir
 import roman_levytskyi
 import artem_prokhvatylov
 import ruslan_liska
+import vladyslav_kriuchkovskyi
 
 class ConsoleController:
 
