@@ -52,4 +52,3 @@ class Task323(Task):
         number = self.arg
         if number is not None:
             return [i for i in range(1, number) if gcd(i, number) == 1]
-

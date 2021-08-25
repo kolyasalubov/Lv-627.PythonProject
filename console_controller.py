@@ -33,7 +33,6 @@ class ConsoleController:
         }
         self.tasks = {x: self.tasks[x] for x in sorted(self.tasks.keys(), key=lambda x: int(x.rstrip('abc')))}
 
-
     def work_with_task(self, task):
         print(task.description)
         if task.require_input:
@@ -51,7 +50,6 @@ class ConsoleController:
                     self.work_with_task(task)
         else:
             print(f"Solution is {task.solve()}")
-
 
     def run(self):
         print(f"Hello! This is the console solver for many mathematical tasks.\nHere is the list of available tasks:")
