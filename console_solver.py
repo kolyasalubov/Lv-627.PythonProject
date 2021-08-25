@@ -3,6 +3,7 @@ import sofiia_kovalchuk
 import mykhailo_solutuions
 import oleh_solutions
 import tadey_kushnir
+import vladyslav_kriuchkovskyi
 
 
 class ConsoleSolver:
@@ -10,9 +11,12 @@ class ConsoleSolver:
         self.tasks = {
             "088a": sofiia_kovalchuk.Task088a(),
             "088b": sofiia_kovalchuk.Task088b(),
+            "088v": vladyslav_kriuchkovskyi.Task088v(),
+            "088g": vladyslav_kriuchkovskyi.Task088g(),
             "108": volodymyr_solutions.Task108(),
             "322": sofiia_kovalchuk.Task322(),
             "331": volodymyr_solutions.Task331(),
+            "332": vladyslav_kriuchkovskyi.Task332(),
             "87": mykhailo_solutuions.Task87(),
             "226": mykhailo_solutuions.Task226(),
             "559": mykhailo_solutuions.Task559(),
