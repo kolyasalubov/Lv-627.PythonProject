@@ -5,7 +5,7 @@ import oleh_solutions
 import tadey_kushnir
 import roman_levytskyi
 import artem_prokhvatylov
-
+import ruslan_liska
 
 class ConsoleController:
     def __init__(self):
@@ -29,9 +29,12 @@ class ConsoleController:
             "243b": tadey_kushnir.Task243b(),
             "182": artem_prokhvatylov.Task182(),
             "560": artem_prokhvatylov.Task560(),
-            "323": artem_prokhvatylov.Task323()
+            "323": artem_prokhvatylov.Task323(),
+            "555": ruslan_liska.Task555(),
+            "178d": ruslan_liska.Task178d(),
+            "178e": ruslan_liska.Task178e()
         }
-        self.tasks = {x: self.tasks[x] for x in sorted(self.tasks.keys(), key=lambda x: int(x.rstrip('abc')))}
+        self.tasks = {x: self.tasks[x] for x in sorted(self.tasks.keys(), key=lambda x: int(x.rstrip('abcde')))}
 
 
     def work_with_task(self, task):
