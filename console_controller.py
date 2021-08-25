@@ -1,3 +1,5 @@
+from string import ascii_letters
+
 import volodymyr_solutions
 import sofiia_kovalchuk
 import mykhailo_solutuions
@@ -53,7 +55,7 @@ class ConsoleController:
         self.up = [1,0][command == 'y']
 
     def show_tasks(self):
-        tasks_list = sorted(self.tasks.keys(), key=lambda x: int(x.rstrip('abc')))
+        tasks_list = sorted(self.tasks.keys(), key=lambda x: int(x.rstrip(ascii_letters)))
         return tasks_list
           
 
@@ -82,7 +84,7 @@ class ConsoleController:
         while not self.exit:
             print('Hello! This is the console solver for many mathematical tasks.' +
                    '\nEnter "exit" to exit.\nHere is the list of available tasks:')
-            print('    '.join(self.show_tasks()))
+            print('  '.join(self.show_tasks()))
             task = input("Which task would you like to view? ")
             if task in self.tasks:
                 self.work_with_task(self.tasks[task])
