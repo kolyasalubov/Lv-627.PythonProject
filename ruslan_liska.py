@@ -1,8 +1,9 @@
 from task import Task
+from math import factorial
 
 class Task555(Task):
     def __init__(self):
-        super()
+        super().__init__()
         self.description = "Given digit is n, get n rows of Pascal triangle"
     
     
@@ -19,17 +20,32 @@ class Task555(Task):
         for i in results:
             print(i)
 
-# a = Task555()
-# print(type(a))
-# a.solve(5)
-
 class Task178d(Task):
+    def __init__(self):
+        super().__init__()
+        self.description = """Given list n: a1, ..., an. Get a quantity 
+                           of numbers ak of the sequence a1, ..., an, 
+                           which satisfy the condition ak < (ak-1 + ak+1)/2"""
+    
+    def change_arguments(self, *args):
+        self.args = args
+
+    def solve(self, n):
+        self.n = n
+        return len([1 for i in range(1, len(n) - 1) if n[i] < (n[i - 1] + n[i + 1]) / 2])  
+
+
+class Task178e(Task):
     def __init__(self):
         super()
         self.description = """Given list n: a1, ..., an. Get a quantity 
                            of numbers ak of the sequence a1, ..., an, 
-                           which satisfy the condition ak < (ak-1 + ak+1)/2"""
+                           which satisfy the condition 2**k < ak-1 < k!"""
 
-    def solver(self, n):
+    def change_arguments(self, *args):
+        self.args = args
+
+    def solve(self, n):
         self.n = n
-        return len([1 for i in range(1, len(n) - 1) if n[i] < (n[i - 1] + n[i + 1]) / 2])  
+        return len([1 for i in range(1, len(n) - 1) if 2 ** int(n[i]) < n[i - 1] < factorial([i])])
+
