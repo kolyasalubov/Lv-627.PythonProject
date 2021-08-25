@@ -87,7 +87,6 @@ class ConsoleController:
  
 
     def run(self):
-        print('Hello! This is the console solver for many mathematical tasks.')
         while not self.exit:
             print('Enter "exit" to exit.\nHere is the list of available tasks:')
             print('  '.join(self.show_tasks()))
@@ -103,4 +102,5 @@ class ConsoleController:
 
 
 if __name__ == "__main__":
+    print('Hello! This is the console solver for many mathematical tasks.')
     ConsoleController().run()
