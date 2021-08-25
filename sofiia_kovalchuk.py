@@ -4,7 +4,7 @@ from task import Task
 
 class Task088a(Task):
     def __init__(self):
-        super()
+        super().__init__()
         self.description = "Given a natural number n. Find is 3 a digit of number n^2."
 
     def solve(self) -> str:
@@ -17,7 +17,7 @@ class Task088a(Task):
 
 class Task088b(Task):
     def __init__(self):
-        super()
+        super().__init__()
         self.description = "Given a natural number n. Change the order of digits of n by reversing its digits."
 
     def solve(self) -> str:
@@ -28,8 +28,9 @@ class Task088b(Task):
 
 class Task322(Task):
     def __init__(self):
-        super()
+        super().__init__()
         self.description = "Find natural number from 1 to 10 000 with the largest sum of divisors."
+        self.require_input = False
 
     def solve(self) -> str:
         count = [0] * 10001  # create a list for final sum of divisors of every number

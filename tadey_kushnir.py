@@ -4,7 +4,7 @@ from math import log, sqrt
 
 class Task107(Task):
     def __init__(self):
-        # super().__init__()
+        super().__init__()
         self.description = "107. Given integer m > 1. Find the greatest integer k, that inequality 4^k < m is right."
 
     def solve(self):
@@ -19,7 +19,7 @@ class Task107(Task):
 
 class Task243a(Task):
     def __init__(self):
-        # super().__init__()
+        super().__init__()
         self.description = "243 a.) Given natural number n. Can we represent it as the sum of two squares" \
                            " of natural numbers?  If possible, then find a pair x, y of such natural numbers " \
                            "that n = x^2 + y^2"
@@ -44,7 +44,7 @@ class Task243a(Task):
 
 class Task243b(Task):
     def __init__(self):
-        # super().__init__()
+        super().__init__()
         self.description = "243 b.) Given natural number n. Can we represent it as the sum of two squares" \
                            " of natural numbers?  If possible, then find all pairs x, y of such natural numbers " \
                            "\nthat n = x^2 + y^2, x >= y."

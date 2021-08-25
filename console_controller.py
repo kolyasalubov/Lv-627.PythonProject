@@ -1,12 +1,37 @@
 import volodymyr_solutions
+import sofiia_kovalchuk
+import mykhailo_solutuions
+import oleh_solutions
+import tadey_kushnir
+import roman_levytskyi
+import artem_prokhvatylov
 
 
 class ConsoleController:
     def __init__(self):
         self.tasks = {
+            "88a": sofiia_kovalchuk.Task088a(),
+            "88b": sofiia_kovalchuk.Task088b(),
             "108": volodymyr_solutions.Task108(),
-            "331": volodymyr_solutions.Task331()
+            "187b": roman_levytskyi.Task187b(),
+            "187c": roman_levytskyi.Task187c(),
+            "322": sofiia_kovalchuk.Task322(),
+            "331": volodymyr_solutions.Task331(),
+            "87": mykhailo_solutuions.Task87(),
+            "226": mykhailo_solutuions.Task226(),
+            "554": roman_levytskyi.Task554(),
+            "559": mykhailo_solutuions.Task559(),
+            "86a": oleh_solutions.Task086a(),
+            "86b": oleh_solutions.Task086b(),
+            "330": oleh_solutions.Task330(),
+            "107": tadey_kushnir.Task107(),
+            "243a": tadey_kushnir.Task243a(),
+            "243b": tadey_kushnir.Task243b(),
+            "182": artem_prokhvatylov.Task182(),
+            "560": artem_prokhvatylov.Task560(),
+            "323": artem_prokhvatylov.Task323()
         }
+        self.tasks = {x: self.tasks[x] for x in sorted(self.tasks.keys(), key=lambda x: int(x.rstrip('abc')))}
 
 
     def work_with_task(self, task):
@@ -30,7 +55,7 @@ class ConsoleController:
 
     def run(self):
         print(f"Hello! This is the console solver for many mathematical tasks.\nHere is the list of available tasks:")
-        print('\n'.join(self.tasks))
+        print('    '.join(self.tasks.keys()))
         task = input("Which task would you like to view? ")
         if task in self.tasks:
             self.work_with_task(self.tasks[task])
