@@ -2,7 +2,7 @@ from task import Task
 
 
 class Task108(Task):
-    def __init__(self)
+    def __init__(self):
         super().__init__()
         self.description = "Given natural number n, find the smallest number of type 2^r, bigger than n."
 

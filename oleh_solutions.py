@@ -3,7 +3,7 @@ from task import Task
 
 class Task086a(Task):
     def __init__(self):
-        super()
+        super().__init__()
         self.description = "Given natural number, find the the number of digits in it"
     
     def change_arguments(self, arg):
@@ -16,7 +16,7 @@ class Task086a(Task):
 
 class Task086b(Task086a):
     def __init__(self):
-        super()
+        super().__init__()
         self.description = "Given natural number, find the the sum of it's digits"
 
     def solve(self):
@@ -24,7 +24,7 @@ class Task086b(Task086a):
 
 class Task330(Task086a):
     def __init__(self):
-        super()
+        super().__init__()
         self.description = "Given natural number, find all perfect numbers smaller it"
         
     @staticmethod

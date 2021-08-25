@@ -3,7 +3,7 @@ from task import Task
 
 class Task87(Task):
     def __init__(self):
-        # super().__init__()
+        super().__init__()
         self.second_arg = None
         self.description = "Task 87. Given natural n, m. Calculate the sum of m last digits of the number n."
 
@@ -18,7 +18,7 @@ class Task87(Task):
 
 class Task226(Task):
     def __init__(self):
-        # super().__init__()
+        super().__init__()
         self.second_arg = None
         self.description = "Task 226. Given two natural numbers m and n. Find all less than mn natural common multiples"
 
@@ -34,7 +34,7 @@ class Task226(Task):
 
 class Task559(Task):
     def __init__(self):
-        # super().__init__()
+        super().__init__()
         self.description = "Task 559. A natural number n is given. Find all less than n Mersenne prime numbers."
 
     def get_prime_numbers(self) -> list:
