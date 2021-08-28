@@ -12,7 +12,7 @@ class Task182(Task):
         sum_of_numbers = 0
         count_of_numbers = 0
         if number is not None:
-            for i in range(number):
+            for i in range(1, number+1):
                 if i % 5 == 0 and i % 7 != 0:
                     sum_of_numbers += i
                     count_of_numbers += 1
