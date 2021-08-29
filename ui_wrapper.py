@@ -43,7 +43,11 @@ class UIWrapper:
                 "."
             )
             task_name = input(
-                "Select a task by entering its name or type 'exit' to terminate this app: " +
+                "Select a task by entering its name or type " +
+                _TextFormat.BOLD + _TextFormat.BLUE +
+                "exit" +
+                _TextFormat.END +
+                " to terminate this app: " +
                 _TextFormat.BOLD + _TextFormat.YELLOW
             )
             print(_TextFormat.END)

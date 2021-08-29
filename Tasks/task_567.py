@@ -21,7 +21,7 @@ def _representable_as_product_of_three_subsequent_naturals(number: int) -> bool:
 
 def _task(number: int) -> bool:
     if number < 1:
-        raise TaskError("The 'number' argument should greater or equal to 1")
+        raise TaskError("The 'number' argument should be greater or equal to 1")
     return _representable_as_product_of_three_subsequent_naturals(_factorial(number))
 
 
