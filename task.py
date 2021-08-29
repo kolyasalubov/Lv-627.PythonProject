@@ -15,6 +15,7 @@ class Task:
 
     Attributes:
          self.args_schema: jsonschema used to validate arguments with which sef.body is called.
+         self.description: a string used to describe the task, later used in end-user interface.
          self.body: function that represents the main logic of the task solution.
          self.body_return_type: body return type.
          self.test: stores pytest/unittest class.
@@ -35,7 +36,7 @@ class Task:
             None
 
         Raises:
-            TypeError: for when validation fails.
+            TypeError, KeyError: for when validation fails.
         """
 
         # Check if body has a __call__ property and
@@ -43,6 +44,8 @@ class Task:
 
         # If any of mentioned checks fail, raise TypeError.
         if not isinstance(kwargs["name"], str):
+            raise TypeError
+        if not isinstance(kwargs["description"], str):
             raise TypeError
         if not callable(kwargs["body"]):
             raise TypeError
@@ -57,6 +60,7 @@ class Task:
             *args: only used for parent class constructor call.
             **kwargs:
                 'name': name of the task used to identify it in AlgoHandler.
+                'description': a string used to describe the task, later used in end-user interface.
                 'body': function that represents the main logic of the task solution.
                 'test': stores pytest/unittest class.
 
@@ -84,6 +88,8 @@ class Task:
                 self.args_schema[key] = "string"
         # Save task name.
         self.name = kwargs["name"]
+        # Save the description.
+        self.description = kwargs["description"]
         # Save function body.
         self.body = kwargs["body"]
         # Return type is extracted from body type hints.
