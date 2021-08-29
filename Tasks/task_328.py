@@ -27,8 +27,7 @@ task_328 = Task(
     name="task_328",
     description=
     """
-    Given a natural number n, calculate n!!, which is defined as the product of all natural numbers
-    that are less or equal n, and have same parity as n.
+    Calculate first 100 prime numbers.
     """,
     body=_task,
     test="Tasks/test_task_328.py"
