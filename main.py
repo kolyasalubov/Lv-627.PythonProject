@@ -1,10 +1,8 @@
-from algo_handler import AlgoHandler
+from ui_wrapper import UIWrapper
 
 
 def main():
-    handler = AlgoHandler()
-    handler.load_tasks("Tasks")
-    handler.tasks["task_113a"].run_test()
+    UIWrapper.main()
 
 
 if __name__ == '__main__':
