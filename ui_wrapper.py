@@ -69,6 +69,6 @@ class UIWrapper:
                 except TaskError as e:
                     print(f"A following exception has occurred during the attempt of running the task: {e}.")
             if action == "test":
-                pass
+                AlgoHandler().run_test(task_name)
 
 
