@@ -29,7 +29,7 @@ task_567 = Task(
     name="task_113a",
     description=
     """
-    Given a natural number n, check wheter it can be represented as a product of three subsequent
+    Given a natural number n, check whether it can be represented as a product of three subsequent
     natural numbers.
     """,
     body=_task,

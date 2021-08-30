@@ -14,8 +14,8 @@ def _task(n: int) -> str:
 task_088a = Task(
     name="task_088a",
     body=_task,
-    description = """
-Given a natural number n. Find is 3 a digit of number n^2.
-Enter natural number (0 < natural number <= +∞): """,
+    description="""
+    Given a natural number n. Find is 3 a digit of number n^2.
+    """,
     test="Tasks/test_task_088a.py"
 )

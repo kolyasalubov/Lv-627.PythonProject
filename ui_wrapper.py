@@ -50,13 +50,18 @@ class UIWrapper:
                 " to terminate this app: " +
                 _TextFormat.BOLD + _TextFormat.YELLOW
             )
-            print(_TextFormat.END)
+            print(_TextFormat.END, end="")
             if task_name not in [*AlgoHandler().tasks.keys(), "exit"]:
                 print("That's an invalid task name, please try again.")
                 continue
             if task_name == "exit":
                 print("Good bye.")
                 break
+            print(
+                _TextFormat.BOLD + _TextFormat.GREEN +
+                AlgoHandler().tasks[task_name].description +
+                _TextFormat.END
+            )
             action = input(
                 "Select an action, type " +
                 _TextFormat.BOLD + _TextFormat.BLUE +
@@ -73,7 +78,7 @@ class UIWrapper:
                 "to select another task: " +
                 _TextFormat.BOLD + _TextFormat.YELLOW
             )
-            print(_TextFormat.END)
+            print(_TextFormat.END, end="")
             while action not in ["run", "test", "cancel"]:
                 print("That's not a valid action, please ty again.")
                 action = input(
@@ -92,7 +97,7 @@ class UIWrapper:
                     "to select another task: " +
                     _TextFormat.BOLD + _TextFormat.YELLOW
                 )
-                print(_TextFormat.END)
+                print(_TextFormat.END, end="")
             if action == "cancel":
                 print("Task aborted.")
                 continue
@@ -118,7 +123,7 @@ class UIWrapper:
                         ": " +
                         _TextFormat.BOLD + _TextFormat.YELLOW
                     )
-                    print(_TextFormat.END)
+                    print(_TextFormat.END, end="")
                     while True:
                         try:
                             converted_argument = task_data[argument_name](raw_argument)
@@ -137,7 +142,7 @@ class UIWrapper:
                                 ": " +
                                 _TextFormat.BOLD + _TextFormat.YELLOW
                             )
-                            print(_TextFormat.END)
+                            print(_TextFormat.END, end="")
                     input_kwargs[argument_name] = converted_argument
                 print("Running the task...")
                 try:

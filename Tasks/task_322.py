@@ -26,8 +26,9 @@ def _task() -> str:
 task_322 = Task(
     name="task_322",
     body=_task,
-    description = """
-Find natural number from 1 to 10 000 with the largest sum of divisors.
- """,
+    description=
+    """
+    Find natural number from 1 to 10 000 with the largest sum of divisors.
+    """,
     test="Tasks/test_task_322.py"
 )

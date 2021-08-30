@@ -12,8 +12,9 @@ def _task(n: int) -> str:
 task_088b = Task(
     name="task_088b",
     body=_task,
-    description = """
-Given a natural number n. Change the order of digits of n by reversing its digits.
-Enter natural number (0 < natural number <= +∞): """,
+    description=
+    """
+    Given a natural number n. Change the order of digits of n by reversing its digits.
+    """,
     test="Tasks/test_task_088b.py"
 )
