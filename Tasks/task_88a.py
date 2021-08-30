@@ -11,8 +11,8 @@ def _task(n: int) -> str:
     return f"3 is not a digit of number {n}^2 = {m}"
 
 
-task_088a = Task(
-    name="task_088a",
+task_88a = Task(
+    name="task_88a",
     body=_task,
     description="""
     Given a natural number n. Find is 3 a digit of number n^2.
