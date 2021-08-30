@@ -9,8 +9,8 @@ def _task(n: int, m: int) -> int:
     return sum([int(s[len(s) - i - 1]) for i in range(m)]) if len(s) >= m else sum([int(str(i)) for i in s])
 
 
-task_87 = Task(
-    name="task_87",
+task_087 = Task(
+    name="task_087",
     description=
     """
     Task 87. Given natural n, m. Calculate the sum of m last digits of the number n.

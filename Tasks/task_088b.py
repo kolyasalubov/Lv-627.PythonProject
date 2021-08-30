@@ -9,8 +9,8 @@ def _task(n: int) -> str:
     return f"Reversed number = {int(n[::-1])} "
 
 
-task_88b = Task(
-    name="task_88b",
+task_088b = Task(
+    name="task_088b",
     body=_task,
     description=
     """

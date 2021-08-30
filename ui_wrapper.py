@@ -38,7 +38,7 @@ class UIWrapper:
                 "\nAvailable registered task names: " +
                 _TextFormat.BOLD + _TextFormat.BLUE +
                 f'{_TextFormat.END}, {_TextFormat.BOLD + _TextFormat.BLUE}'
-                .join(sorted(map(lambda x: x[5:], AlgoHandler().tasks.keys()), key=lambda x: int(x.strip('abcdefg')))) +
+                .join(sorted(AlgoHandler().tasks.keys())) +
                 _TextFormat.END +
                 "."
             )
