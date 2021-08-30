@@ -1,10 +1,13 @@
 from task import Task
+from task_error import TaskError
 
 
 def get_prime_numbers(n: int) -> list:
-    """Returns a list of prime numbers from 3 to n."""
+    """Returns a list of prime numbers from 1 to n."""
+    if n < 1:
+        raise TaskError("The argument must be greater or equal to 1")
     array = []
-    for num in range(3, n + 1):
+    for num in range(1, n + 1):
         for i in range(2, num):
             if num % i == 0:
                 break
@@ -14,8 +17,8 @@ def get_prime_numbers(n: int) -> list:
 
 
 def _task(n: int) -> list:
-    """Task 559. A natural number n is given. Find all less than n Mersenne prime numbers."""
-    print("Task 559. A natural number n is given. Find all less than n Mersenne prime numbers.")
+    if n < 1:
+        raise TaskError("The argument must be greater or equal to 1")
     primes = get_prime_numbers(n)
     array, i = [], 2
     while 1:
@@ -29,6 +32,10 @@ def _task(n: int) -> list:
 
 
 task_559 = Task(
+    description=
+    """
+    Task 559. A natural number n is given. Find all less than n Mersenne prime numbers.
+    """,
     name="task_559",
     body=_task,
     test="Tasks/test_task_559.py"
