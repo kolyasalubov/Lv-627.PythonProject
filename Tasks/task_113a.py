@@ -1,7 +1,10 @@
 from task import Task
+from task_error import TaskError
 
 
 def _task(number: int) -> int:
+    if number < 1:
+        raise TaskError("The 'number' argument should be greater or equal to 1")
     factorial = 1
     for factor in range(1, number + 1, 1):
         if (number % 2 == 0 and factor % 2 == 0) or\
