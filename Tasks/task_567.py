@@ -26,7 +26,7 @@ def _task(number: int) -> bool:
 
 
 task_567 = Task(
-    name="task_113a",
+    name="task_567",
     description=
     """
     Given a natural number n, check whether it can be represented as a product of three subsequent
