@@ -15,6 +15,8 @@ def _task (number: int) -> list:
 
 task_555 = Task(
     name="task_555",
+    description="",
     body=_task,
     test="Tasks/test_task_555.py"
+
 )
