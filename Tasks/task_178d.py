@@ -12,7 +12,7 @@ task_178d = Task(
     name="task_178d",
     description="""Given list n: a1, ..., an. Get a quantity 
                            of numbers ak of the sequence a1, ..., an, 
-                           which satisfy the condition ak < (ak-1 + ak+1)/2"""
+                           which satisfy the condition ak < (ak-1 + ak+1)/2""",
     body=_task,
     test="Tasks/test_task_182.py"
 )
