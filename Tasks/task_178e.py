@@ -5,8 +5,13 @@ def _task(*args) -> str:
                            of numbers ak of the sequence a1, ..., an,
                            which satisfy the condition 2**k < ak-1 < k!"""
     n = args
-    result = len([1 for i in range(1, len(n) - 1) if 2 ** int(n[i]) < n[i - 1] < factorial([i])])
-    return f"There is {result} numbers in row {n} which satisfy the condition"
+    if len(n) == 1:
+        return "You have given only 1 argument"
+    elif len(n) > 1:
+        result = len([1 for i in range(1, len(n) - 1) if 2 ** int(n[i]) < n[i - 1] < factorial([i])])
+        return f"There is {result} numbers in row {n} which satisfy the condition"
+    else:
+        return "No arguments were given"
 
 task_178e = Task(
     name="task_178e",
