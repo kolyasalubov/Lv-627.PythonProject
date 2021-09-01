@@ -1,5 +1,6 @@
 from task import Task
 
+
 def _task(n: int) -> int:
     """
     Given a natural number n, assign ones to the beginning and the end of this number
