@@ -1,4 +1,4 @@
-task_107 = lambda x: x^2
+from Tasks.task_107 import task_107
 import pytest
 
 

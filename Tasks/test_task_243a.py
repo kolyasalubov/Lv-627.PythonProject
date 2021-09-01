@@ -1,4 +1,4 @@
-task_243a = lambda x: [x, x ^ 2]
+from Tasks.task_243a import task_243a
 import pytest
 
 
@@ -10,10 +10,10 @@ def test_body():
 
 
 def test_none_result():
-    assert not task_243a.run_body(19)
-    assert not task_243a.run_body(16)
-    assert not task_243a.run_body(28)
-    assert not task_243a.run_body(33)
+    assert task_243a.run_body(19) == "There is no pair of such x, y"
+    assert task_243a.run_body(16) == "There is no pair of such x, y"
+    assert task_243a.run_body(28) == "There is no pair of such x, y"
+    assert task_243a.run_body(33) == "There is no pair of such x, y"
 
 def test_invalid_input():
     with pytest.raises(TypeError):
