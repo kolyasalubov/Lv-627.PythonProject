@@ -1,5 +1,6 @@
 from task import Task
 
+
 def _task(value):
     if value > 0:
         string_value = str(value)

@@ -1,10 +1,12 @@
 from task import Task
 
+
 def factorialof(value):
     result = 1
     for x in range(1, value + 1):
         result *= x
     return result
+
 
 def _task(n):
     listofnum = []

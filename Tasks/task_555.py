@@ -1,5 +1,6 @@
 from task import Task
 
+
 def _task (number: int) -> list:
     results = []
     for _ in range(number):
