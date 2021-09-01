@@ -10,6 +10,3 @@ class Test113a(unittest.TestCase):
         self.assertEqual(result1, 1)
         self.assertEqual(result2, 15)
         self.assertEqual(result3, 48)
-
-if __name__ == '__main__':
-    unittest.main()
