@@ -1,17 +1,21 @@
 from task import Task
+from task_error import TaskError
 
-def _task(a, *args) -> str:
+
+def _task(number:int) -> str:
     """Given list n: a1, ..., an. Get a quantity
                            of numbers ak of the sequence a1, ..., an,
                            which satisfy the condition 2**k < ak-1 < k!"""
-    n = a, *args
+    n = []
+    for i in range(1, number+1):
+        n.append(i)
     if len(n) == 1:
-        return "You have given only 1 argument"
+        raise TaskError("1 argument were given")
     elif len(n) > 1:
         result = len([1 for i in range(1, len(n) - 1) if 2 ** int(n[i]) < n[i - 1] < factorial([i])])
-        return f"There is {result} numbers in row {n} which satisfy the condition"
+        return f"There is {result} numbers in row which satisfy the condition 2**k < ak-1 < k!"
     else:
-        return "No arguments were given"
+        raise TaskError("No arguments were given")
 
 
 task_178e = Task(
@@ -22,4 +26,4 @@ task_178e = Task(
     body=_task,
     test="Tasks/test_task_182.py"
 )
-
+print(_task(10000))
