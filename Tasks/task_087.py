@@ -16,5 +16,5 @@ task_087 = Task(
     Task 87. Given natural n, m. Calculate the sum of m last digits of the number n.
     """,
     body=_task,
-    test="Tasks/test_task_87.py"
+    test="Tasks/test_task_087.py"
 )
