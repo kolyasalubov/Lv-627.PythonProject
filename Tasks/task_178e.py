@@ -9,13 +9,9 @@ def _task(number:int) -> str:
     n = []
     for i in range(1, number+1):
         n.append(i)
-    if len(n) == 1:
-        raise TaskError("1 argument were given")
-    elif len(n) > 1:
-        result = len([1 for i in range(1, len(n) - 1) if 2 ** int(n[i]) < n[i - 1] < factorial([i])])
-        return f"There is {result} numbers in row which satisfy the condition 2**k < ak-1 < k!"
-    else:
-        raise TaskError("No arguments were given")
+
+    result = len([1 for i in range(1, len(n) - 1) if 2 ** int(n[i]) < n[i - 1] < factorial([i])])
+    return f"There is {result} numbers in row which satisfy the condition 2**k < ak-1 < k!"
 
 
 task_178e = Task(
