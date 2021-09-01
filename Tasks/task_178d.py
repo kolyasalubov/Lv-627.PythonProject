@@ -18,8 +18,5 @@ task_178d = Task(
                            of numbers ak of the sequence a1, ..., an, 
                            which satisfy the condition ak < (ak-1 + ak+1)/2""",
     body=_task,
-    test="Tasks/test_task_182.py"
+    test="Tasks/test_task_178d.py"
 )
-
-
-print(_task(10000))
