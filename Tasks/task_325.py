@@ -1,6 +1,7 @@
 from task import Task
+from typing import List
 
-def simle_value(num):
+def simle_value(num : int) -> bool:
     count = 0
     for x in range(1, num + 1):
         if num % x == 0:
@@ -10,7 +11,7 @@ def simle_value(num):
     else:
         return False
 
-def _task(n):
+def _task(n : int) -> List[int]:
     if n > 0 :
         list_values = []
         for x in range(1, n + 1):

@@ -1,14 +1,12 @@
 from task import Task
 
-
-def factorialof(value):
+def factorialof(value : int) -> int:
     result = 1
     for x in range(1, value + 1):
         result *= x
     return result
 
-
-def _task(n):
+def _task(n : int) -> bool:
     listofnum = []
     for x in range(1, factorialof(n) + 1):
         listofnum.append(x)
