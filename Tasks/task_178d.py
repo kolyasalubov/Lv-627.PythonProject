@@ -6,7 +6,7 @@ def _task(*args) -> str:
                            which satisfy the condition ak < (ak-1 + ak+1)/2"""
     n = args
     result = len([1 for i in range(1, len(n) - 1) if n[i] < (n[i - 1] + n[i + 1]) / 2])
-    return f"There is {result} digits in sequence {n} which satisfy this condition"
+    return f"There is {result} digits in sequence {n} which satisfy the condition ak < (ak-1 + ak+1)/2"
 
 task_178d = Task(
     name="task_178d",
