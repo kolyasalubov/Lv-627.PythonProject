@@ -1,15 +1,11 @@
 from task import Task
+from task_error import TaskError
 
 
-def _task(value: int) -> str:
-    if value > 0:
-        string_value = str(value)
-        list_values = []
-        for x in string_value:
-            list_values.append(int(x))
-        return str(list_values[0])
-    else:
-        return 'Enter Natural number!'
+def _task(value : int) -> int:
+    if value < 1:
+        raise TaskError("The 'number' argument should be greater or equal to 1")
+    return int(value.__str__()[0])
 
 
 task_086v = Task(
