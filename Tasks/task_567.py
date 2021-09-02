@@ -1,4 +1,5 @@
 from task import Task
+from task_error import TaskError
 
 def factorialof(value : int) -> int:
     result = 1
@@ -7,6 +8,12 @@ def factorialof(value : int) -> int:
     return result
 
 def _task(n : int) -> bool:
+    if n < 1:
+        raise TaskError("The 'number' argument should be greater or equal to 1")
+    if n % 6 != 0:
+        return False
+    if n < 6:
+        return False
     listofnum = []
     for x in range(1, factorialof(n) + 1):
         listofnum.append(x)
