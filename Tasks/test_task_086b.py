@@ -15,7 +15,7 @@ def test_task_086a():
 
 
 class TestTask086b(TestCase):
-    def test_task_559(self) -> None:
+    def test_task_330(self) -> None:
         test1 = task_086b.run_body(2)
         self.assertEqual(test1, 2)
 
@@ -37,3 +37,6 @@ class TestTask086b(TestCase):
 
         with pytest.raises(TaskError):
             task_086b.run_body(-456)
+
+        with pytest.raises(TaskError):
+            task_086b.run_body(0)
