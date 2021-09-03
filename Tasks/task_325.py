@@ -29,7 +29,7 @@ task_325 = Task(
     name="task_325",
     description=
     """
-    Given a natural number n, find all simple divisors of number n
+    Given a natural number n, find all Prime number divisors of number n
     """,
     body=_task,
     test="Tasks/test_task_325.py"
