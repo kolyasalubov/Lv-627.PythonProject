@@ -14,10 +14,6 @@ def test_task_086a():
 
 
 class TestTask086a(TestCase):
-    def tearDown(self) -> None:
-        """ Executed after every test case """
-        print("\ntearDown executing after the test case. Result:")
-
     def test_task_559(self) -> None:
         test1 = task_086a.run_body(2)
         self.assertEqual(test1, 1)
