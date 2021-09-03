@@ -1,5 +1,6 @@
 from task import Task
 
+
 def _task(n: int) -> int:
     """
     Given a natural number n, swap first and last digits of this number
