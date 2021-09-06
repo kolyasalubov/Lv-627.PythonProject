@@ -1,6 +1,7 @@
 import unittest
 from Tasks.task_113a import task_113a
 
+
 class Test113a(unittest.TestCase):
 
     def test_double_factorial(self):
@@ -10,3 +11,5 @@ class Test113a(unittest.TestCase):
         self.assertEqual(result1, 1)
         self.assertEqual(result2, 15)
         self.assertEqual(result3, 48)
+
+

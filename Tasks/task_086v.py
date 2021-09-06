@@ -3,6 +3,9 @@ from task_error import TaskError
 
 
 def _task(value : int) -> int:
+    """
+        Given a natural number n, find first digit of number n
+    """
     if value < 1:
         raise TaskError("The 'number' argument should be greater or equal to 1")
     return int(value.__str__()[0])
