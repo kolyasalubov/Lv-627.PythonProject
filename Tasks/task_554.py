@@ -4,6 +4,12 @@ from typing import Tuple
 
 
 def _task(number: int) -> List[Tuple[int, int, int]]:
+    """
+    Find all pythagorean triples that are lower than given natural number n.
+    Pythagorean triples are numbers such that a^2 + b^2 = c^2 and a <= b <= c <= n
+    """
+    if number <= 1:
+        return []
     pythagorean_triples = []
     for c in range(number):
         for b in range(c):
@@ -17,7 +23,7 @@ task_554 = Task(
     name="task_554",
     description=
     """
-    Find all pythagorean triple that are lower than given natural number.
+    Find all pythagorean triples that are lower than given natural number.
     """,
     body=_task,
     test="Tasks/test_task_554.py"

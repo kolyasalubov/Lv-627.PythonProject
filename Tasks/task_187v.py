@@ -4,7 +4,10 @@ from math import sqrt
 
 
 def _task(numbers: List[int]) -> int:
-    counter = len([i for i in numbers if sqrt(i) % 2 == 0])
+    """
+    Calculate quantity of numbers that are squares of even numbers in given list of natural number.
+    """
+    counter = len([i for i in numbers if sqrt(i) % 2 == 0 and i >= 1])
     return counter
 
 
