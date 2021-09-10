@@ -7,7 +7,7 @@ def get_prime_numbers(n: int) -> list:
     if n < 1:
         raise TaskError("The argument must be greater or equal to 1")
     array = []
-    for num in range(1, n + 1):
+    for num in range(1, n):
         for i in range(2, num):
             if num % i == 0:
                 break
