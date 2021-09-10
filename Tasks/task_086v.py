@@ -1,23 +1,22 @@
 from task import Task
+from task_error import TaskError
 
 
-def _task(value):
-    if value > 0:
-        string_value = str(value)
-        list_values = []
-        for x in string_value:
-            list_values.append(int(x))
-        return list_values[0]
-    else:
-        return 'Enter Natural number!'
-        
+def _task(value : int) -> int:
+    """
+        Given a natural number n, find first digit of number n
+    """
+    if value < 1:
+        raise TaskError("The 'number' argument should be greater or equal to 1")
+    return int(value.__str__()[0])
 
-task_86v = Task(
-    name="task_86v",
+
+task_086v = Task(
+    name="task_086v",
     description=
     """
     Given a natural number n, find first digit of number n
     """,
     body=_task,
-    test="Tasks/test_task_86v.py"
+    test="Tasks/test_task_086v.py"
 )
