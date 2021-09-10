@@ -10,7 +10,7 @@ def _task(n: int) -> str:
     return "\n".join(quadratic_sum(n))
 
 
-task_331a = Task(
+task_331b = Task(
     name="task_331b",
     description=
     """
@@ -18,5 +18,5 @@ task_331a = Task(
     any.
     """,
     body=_task,
-    test="Tasks/test_task_331a.py"
+    test="Tasks/test_task_331b.py"
 )
