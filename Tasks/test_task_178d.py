@@ -4,9 +4,9 @@ from task_error import TaskError
 import pytest
 
 
-class TestTask178e(TestCase):
+class TestTask178d(TestCase):
 
-    def test_task_178e(self):
+    def test_task_178d(self):
         test1 = task_178d.run_body(1)
         self.assertEqual(test1, 0)
 
@@ -16,6 +16,7 @@ class TestTask178e(TestCase):
         test3 = task_178d.run_body(1000)
         self.assertEqual(test3, 0)
 
+    def test_errors_task_178d(self):
         with pytest.raises(TaskError):
             task_178d.run_body(-1)
 

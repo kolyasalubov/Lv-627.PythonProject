@@ -16,6 +16,7 @@ class TestTask178e(TestCase):
         test3 = task_178e.run_body(1000)
         self.assertEqual(test3, 0)
 
+    def test_errors_task_178e(self):
         with pytest.raises(TaskError):
             task_178e.run_body(-1)
 
