@@ -14,7 +14,7 @@ def test_task_086a():
 
 
 class TestTask086a(TestCase):
-    def test_task_330(self) -> None:
+    def test_task_086a(self) -> None:
         test1 = task_086a.run_body(2)
         self.assertEqual(test1, 1)
 
