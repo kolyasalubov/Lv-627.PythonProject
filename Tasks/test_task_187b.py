@@ -25,5 +25,3 @@ class TestTask187b(TestCase):
 
         with pytest.raises(TaskError):
             task_187b.run_body(0)
-
-print(task_187b.run_body(1))
