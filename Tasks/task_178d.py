@@ -12,7 +12,7 @@ def _task(number: int) -> str:
         for i in range(1, number + 1):
             n.append(i)
         result = len([1 for i in range(1, len(n) - 1) if n[i] < (n[i - 1] + n[i + 1]) / 2])
-        return f"There is {result} digits in given sequence which satisfy the condition ak < (ak-1 + ak+1)/2"
+        return result
     elif number == 1:
         return "You sequence contains only 1 element"
     else:

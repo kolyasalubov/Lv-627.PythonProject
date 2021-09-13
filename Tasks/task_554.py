@@ -19,6 +19,7 @@ def _task(number: int) -> List[Tuple[int, int, int]]:
     return pythagorean_triples
 
 
+
 task_554 = Task(
     name="task_554",
     description=

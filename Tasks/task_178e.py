@@ -11,7 +11,7 @@ def _task(number:int) -> str:
         for i in range(1, number+1):
             n.append(i)
         result = len([1 for i in range(1, len(n) - 1) if 2 ** int(n[i]) < n[i - 1] < factorial([i])])
-        return f"There is {result} numbers in row which satisfy the condition 2**k < ak-1 < k!"
+        return result
     elif number == 1:
         return "You sequence contains only 1 element"
     else:
