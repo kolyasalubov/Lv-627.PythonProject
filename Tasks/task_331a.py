@@ -12,11 +12,13 @@ def _task(n: int) -> str:
     """
     Given a natural number n, find a, b and c such that a^2 + b^2 + c^2 = n, if there is any.
     """
-    result = quadratic_sum(n)
-    if len(result) == 3:
-        return f"a={result[1]}, b={result[2]}, c={result[3]}"
-    else:
+    try:
+        result = next(quadratic_sum(n))
+    except StopIteration:
         return "There is no such a, b and c"
+    else:
+        return f"a={result[0]}, b={result[1]}, c={result[2]}"
+
 
 
 task_331a = Task(
