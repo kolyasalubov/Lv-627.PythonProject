@@ -7,7 +7,7 @@ import pytest
 class TestTask187b(TestCase):
 
     def test_task_187b(self):
-        test1 = task_187b.run_body([1,2,4,5,6,78)
+        test1 = task_187b.run_body([1,2,4,5,6,78])
         self.assertEqual(test1, 0)
 
         test2 = task_187b.run_body([1,2,15,45])
