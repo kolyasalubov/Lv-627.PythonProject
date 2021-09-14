@@ -7,7 +7,7 @@ def _task(n: int) -> str:
     Given a natural number n, find all possible combinations of a, b and c such that a^2 + b^2 + c^2 = n, if there is
     any.
     """
-    return "\n".join(quadratic_sum(n))
+    return "\n".join(map(lambda x: str(x), quadratic_sum(n)))
 
 
 task_331b = Task(
