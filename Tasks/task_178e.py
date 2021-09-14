@@ -7,12 +7,15 @@ def _task(number:int) -> str:
                            of numbers ak of the sequence a1, ..., an,
                            which satisfy the condition 2**k < ak-1 < k!"""
     n = []
-    for i in range(1, number+1):
-        n.append(i)
-
-    result = len([1 for i in range(1, len(n) - 1) if 2 ** int(n[i]) < n[i - 1] < factorial([i])])
-    return f"There is {result} numbers in row which satisfy the condition 2**k < ak-1 < k!"
-
+    if number > 1:
+        for i in range(1, number+1):
+            n.append(i)
+        result = len([1 for i in range(1, len(n) - 1) if 2 ** int(n[i]) < n[i - 1] < factorial([i])])
+        return result
+    elif number == 1:
+        return "You sequence contains only 1 element"
+    else:
+        raise TaskError
 
 task_178e = Task(
     name="task_178e",
@@ -20,6 +23,5 @@ task_178e = Task(
                            of numbers ak of the sequence a1, ..., an,
                            which satisfy the condition 2**k < ak-1 < k!""",
     body=_task,
-    test="Tasks/test_task_182.py"
+    test="Tasks/test_task_178e.py"
 )
-print(_task(10000))
