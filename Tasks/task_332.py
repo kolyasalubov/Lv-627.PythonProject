@@ -36,7 +36,7 @@ def _task(n: int) -> str:
     return "Impossible result, something gone wrong with the algorithm number 332"
 
 
-task_088v = Task(
+task_332 = Task(
     name="task_332",
     body=_task,
     description="""

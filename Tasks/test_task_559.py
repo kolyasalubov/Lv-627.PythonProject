@@ -6,9 +6,9 @@ from task_error import TaskError
 
 def test_task_559():
     assert task_559.run_body(2) == []
-    assert task_559.run_body(3) == [3]
+    assert task_559.run_body(3) == []
     assert task_559.run_body(5) == [3]
-    assert task_559.run_body(7) == [3, 7]
+    assert task_559.run_body(7) == [3]
     assert task_559.run_body(8) == [3, 7]
     assert task_559.run_body(14) == [3, 7]
     assert task_559.run_body(34) == [3, 7, 31]

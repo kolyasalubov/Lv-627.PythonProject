@@ -13,5 +13,3 @@ class Test113a(unittest.TestCase):
         self.assertEqual(result3, 48)
 
 
-if __name__ == '__main__':
-    unittest.main()
