@@ -10,7 +10,7 @@ def _task(number: int) -> int:
     if number < 1:
         raise TaskError
     numbers = [i for i in range(1, number + 1)]
-    counter = len([i for i in numbers if sqrt(i) % 2 == 0 and i >= 1])
+    counter = len([i for i in numbers if sqrt(i) % 2 == 0])
     return counter
 
 
