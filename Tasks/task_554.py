@@ -1,6 +1,7 @@
 from task import Task
 from typing import List
 from typing import Tuple
+from task_error import TaskError
 
 
 def _task(number: int) -> List[Tuple[int, int, int]]:
@@ -8,8 +9,8 @@ def _task(number: int) -> List[Tuple[int, int, int]]:
     Find all pythagorean triples that are lower than given natural number n.
     Pythagorean triples are numbers such that a^2 + b^2 = c^2 and a <= b <= c <= n
     """
-    if number <= 1:
-        return []
+    if number < 1:
+        raise TaskError
     pythagorean_triples = []
     for c in range(number):
         for b in range(c):
